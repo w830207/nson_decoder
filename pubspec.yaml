@@ -1,5 +1,5 @@
 name: nson_decoder
-description: A new Flutter project.
+description: A Flutter project for NSON/JSON format conversion.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
