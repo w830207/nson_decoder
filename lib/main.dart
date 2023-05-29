@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'NSON Decoder'),
     );
   }
 }
@@ -127,12 +127,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                   child: Container(
-                    height: 200,
-                    width: 200,
+                    height: 300,
+                    width: 300,
                     color: _dragging
-                        ? Colors.blue.withOpacity(0.4)
-                        : Colors.black26,
-                    child: const Center(child: Text("Drop here")),
+                        ? Colors.deepPurple
+                        : Colors.deepPurple.shade200,
+                    child: const Center(child: Text("Drop nson/json here",style: TextStyle(color: Colors.white),),),
                   ),
                 ),
               )
