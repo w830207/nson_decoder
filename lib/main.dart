@@ -132,21 +132,41 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: _dragging
                         ? Colors.deepPurple
                         : Colors.deepPurple.shade200,
-                    child: const Center(child: Text("Drop nson/json here",style: TextStyle(color: Colors.white),),),
+                    child: const Center(
+                      child: Text(
+                        "Drop nson/json here",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
                   ),
                 ),
               )
             : Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  TextButton(
-                      onPressed: popJson, child: const Text("save json")),
-                  TextButton(
-                      onPressed: popNson, child: const Text("save nson")),
-                  TextButton(onPressed: reset, child: const Text("reset")),
                   TextField(
                     controller: textEditingController,
                     maxLines: null,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Wrap(
+                      spacing: 8.0,
+                      children: [
+                        TextButton(
+                          onPressed: popJson,
+                          child: const Text("save json"),
+                        ),
+                        TextButton(
+                          onPressed: popNson,
+                          child: const Text("save nson"),
+                        ),
+                        TextButton(
+                          onPressed: reset,
+                          child: const Text("reset"),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
